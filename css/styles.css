@@ -290,3 +290,10 @@ main section,
     font-size: 0.9rem;
     margin-top: 0.3rem;
 }
+
+.form-success {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #7ddf9a;
+    padding: 2rem 0;
+}
