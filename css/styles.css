@@ -238,3 +238,55 @@ main section,
         /* titular más chico en móvil */
     }
 }
+
+
+/* ===== FORMULARIO ===== */
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: var(--color-light);
+    color: var(--color-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.input-error {
+    border-color: #d9534f !important;
+}
+
+.error-message {
+    color: #ff9d9d;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}

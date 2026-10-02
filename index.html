@@ -5,6 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="DN-Studio — Diseñamos y desarrollamos páginas web profesionales para negocios pequeños.">
+    <!-- Favicon: el iconito de la pestaña (Nicole lo diseña) -->
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <!-- Open Graph: la tarjeta que se ve al compartir por WhatsApp -->
+    <meta property="og:title" content="DN-Studio — Diseño y desarrollo de páginas web">
+    <meta property="og:description" content="Diseñamos y desarrollamos páginas web profesionales para negocios pequeños. Diseño gráfico, branding y mantenimiento.">
+    <meta property="og:image" content="https://TU-SITIO.netlify.app/img/og-image.jpg">
+    <meta property="og:url" content="https://TU-SITIO.netlify.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <title>DN-Studio — Diseño y desarrollo de páginas web</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -85,6 +96,28 @@
         <h2>Contacto</h2>
         <p>Cuéntanos de tu proyecto. Respondemos en menos de 24 horas.</p>
         <a href="https://wa.me/15879739850" target="_blank" rel="noopener" class="btn">Escríbenos por WhatsApp</a>
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/TU-CORREO-AQUI" method="POST">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde DN-Studio">
+            <input type="hidden" name="_template" value="table">
+
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="email" id="email" name="email" placeholder="deybijimenez94@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" placeholder="Cuéntanos de tu proyecto..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
+
     </section>
 </main>
 
