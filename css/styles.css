@@ -1,0 +1,240 @@
+/* ===== VARIABLES DE MARCA =====
+   Nicole: estos 5 valores definen toda la identidad.
+   Cambias aquí, cambia toda la página. Así se trabaja en equipo. */
+
+:root {
+    --color-primary: #0e6b4f;
+    --color-accent: #f2a541;
+    --color-dark: #1f2a33;
+    --color-light: #ffffff;
+    --color-bg: #f7f5f0;
+    --max-width: 1100px;
+}
+
+
+/* Base: quita márgenes del navegador y evita
+   que el padding rompa los anchos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--color-dark);
+}
+
+
+/* Contenedor centrado: limita el ancho y centra.
+   El truco más usado en CSS. */
+
+.site-header .nav,
+main section,
+.site-footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+/* ===== HEADER ===== */
+
+.site-header {
+    border-bottom: 1px solid #e5e0d8;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    background: var(--color-light);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: bold;
+}
+
+
+/* ===== HERO ===== */
+
+.hero {
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: var(--color-bg);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* ===== BOTONES ===== */
+
+.btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-light);
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.3rem;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+
+/* ===== SECCIONES Y TARJETAS ===== */
+
+.services,
+.portfolio,
+.about,
+.contact {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.services,
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+}
+
+.services h2,
+.portfolio h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.about h2,
+.contact h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.service-card,
+.project-card,
+.about article {
+    background: var(--color-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.service-card h3,
+.project-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.about article {
+    margin-bottom: 1rem;
+}
+
+
+/* ===== CONTACTO Y FOOTER ===== */
+
+.contact {
+    text-align: center;
+    background: var(--color-dark);
+    color: var(--color-light);
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.contact .btn {
+    margin-top: 1rem;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+
+/* Botón hamburguesa: oculto en escritorio */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--color-dark);
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* aparece solo en móvil */
+    }
+    .nav-links {
+        display: none;
+        /* se esconde el menú */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-light);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid #e5e0d8;
+    }
+    .nav-links.active {
+        display: flex;
+        /* esta clase la prende el JS */
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+        /* titular más chico en móvil */
+    }
+}
